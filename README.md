@@ -109,8 +109,10 @@ DSH 会自动完成安装，重启后即可在侧边栏找到「B站」。
 
 ## 🖥 环境要求
 
-- **Windows**（使用 `curl.exe` / `powershell.exe` 作为网络子进程）
+- **macOS / Linux / Windows**：网络子进程用系统 `curl`（Windows 用 `curl.exe`），封面图下载也走 `curl`，不再依赖 `powershell.exe`
 - **DSH 桌面应用**（web profile）
+
+> macOS 适配说明：`lib/index.js` 里 `curl.exe`、`cwd: C:\`、PowerShell 下载封面三处已按平台分支；另修复了 B 站搜索接口返回 `//i0.hdslb.com/...` 协议相对封面时 `/api/bili2/pic` 400 的问题。`node test/smoke.mjs` 可对真实 B 站接口跑通热门/排行/搜索/封面四项。
 
 ## 🤝 参与贡献
 
