@@ -32,5 +32,8 @@
     "lib/index.js",
     "lib/client.js",
     "cordis.patch.yml"
-  ]
+  ],
+  "dependencies": {
+    "qrcode-generator": "^2.0.4"
+  }
 }
